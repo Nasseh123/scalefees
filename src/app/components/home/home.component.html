@@ -14,8 +14,11 @@
 
           <!-- <a href="#"  class="btn btn-primary">Calculate</a> -->
           <h2 id="totalvalue" *ngIf="totalFees">TOTAL:{{totalFees |currency:'Ksh' }}</h2>
+          <label for="" *ngIf="feesOne"> <u> Price BreakDown </u></label>
+          <p *ngIf="standardfees"> The standard fees is {{standardfees |currency:'Ksh'}} </p>
           <ol>
-              <label for="" *ngIf="feesOne">Price BreakDown</label>
+             
+              
               <li *ngIf="feesOne"><span>(2% *{{feesOneValue |currency:'Ksh'}})=</span> <span> {{feesOne |currency:'Ksh'}}</span></li> <!-- FIRST VALUE-->
               <li *ngIf="feesTwo"><span>(1.5% * {{feesTwoValue |currency:'Ksh'}})=</span> <span>{{feesTwo |currency:'Ksh'}}</span></li><!--SECOND VALUE-->
               <li *ngIf="feesThree"><span>(1.25% * {{feesThreeValue |currency:'Ksh'}})=</span><span>{{feesThree |currency:'Ksh'}}</span></li>

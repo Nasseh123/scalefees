@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   feesThree: number;
   feesTwo: number;
   feesOne: number;
+  standardfees: any;
   constructor() { }
 
   ngOnInit(): void {
@@ -29,17 +30,19 @@ export class HomeComponent implements OnInit {
     // HANDLING VALUE BELOW 5,000,000
     if (value<=5000000){
       // this.clearInputs()
+
       this.feesOne=(2/100)*value
       this.feesOneValue = value
+
       if (this.feesOne<35000){
         
         this.totalFees=35000
+        this.standardfees=35000
         console.log('heree');
-        // document.getElementById('totalvalue').innerHTML=this.totalFees
+        
       }else{
         this.totalFees=this.feesOne
-        // document.getElementById('totalvalue').innerHTML=this.totalFees
-      }
+        }
     }
     // HANDLING VALUE OVER 5,000,000
     if (value >=5000001){
